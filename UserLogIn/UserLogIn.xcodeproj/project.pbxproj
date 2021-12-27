@@ -13,6 +13,7 @@
 		12A507D62779C02300805124 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12A507D42779C02300805124 /* Main.storyboard */; };
 		12A507D82779C02600805124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12A507D72779C02600805124 /* Assets.xcassets */; };
 		12A507DB2779C02600805124 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12A507D92779C02600805124 /* LaunchScreen.storyboard */; };
+		12A507E32779D7E400805124 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A507E22779D7E400805124 /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		12A507D72779C02600805124 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12A507DA2779C02600805124 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12A507DC2779C02600805124 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12A507E22779D7E400805124 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				12A507D72779C02600805124 /* Assets.xcassets */,
 				12A507D92779C02600805124 /* LaunchScreen.storyboard */,
 				12A507DC2779C02600805124 /* Info.plist */,
+				12A507E22779D7E400805124 /* LogInViewController.swift */,
 			);
 			path = UserLogIn;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12A507E32779D7E400805124 /* LogInViewController.swift in Sources */,
 				12A507D32779C02300805124 /* ViewController.swift in Sources */,
 				12A507CF2779C02300805124 /* AppDelegate.swift in Sources */,
 				12A507D12779C02300805124 /* SceneDelegate.swift in Sources */,
