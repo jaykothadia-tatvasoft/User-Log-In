@@ -9,15 +9,24 @@ import UIKit
 
 class LogInViewController: UIViewController {
     
-    //var sample : String = ""
-    //@IBOutlet private weak var sampleLable: UILabel!
+    var userName : String = ""
+    @IBOutlet private weak var userNameLable: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.navigationController?.setNavigationBarHidden(true, animated: true)
-        //ampleLable.text = sample
         // Do any additional setup after loading the view.
+        title = "Log In"
+        if(userName != ""){
+            userNameLable.text = "Hello \(userName)!!!"
+        }
     }
+    
+    @IBAction func didTappedLogIn(_ sender: UIButton) {
+        let userActivityViewController = self.storyboard?.instantiateViewController(withIdentifier: "TabBar") as! UITabBarController
+        self.navigationController?.pushViewController(userActivityViewController, animated: true)
+        
+    }
+    
     
 
     /*

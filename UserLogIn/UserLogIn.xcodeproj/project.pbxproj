@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1239CF61277B24B800757038 /* UserSecondActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1239CF60277B24B800757038 /* UserSecondActivityViewController.swift */; };
 		12A507CF2779C02300805124 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A507CE2779C02300805124 /* AppDelegate.swift */; };
 		12A507D12779C02300805124 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A507D02779C02300805124 /* SceneDelegate.swift */; };
 		12A507D32779C02300805124 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A507D22779C02300805124 /* ViewController.swift */; };
@@ -14,9 +15,11 @@
 		12A507D82779C02600805124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12A507D72779C02600805124 /* Assets.xcassets */; };
 		12A507DB2779C02600805124 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12A507D92779C02600805124 /* LaunchScreen.storyboard */; };
 		12A507E32779D7E400805124 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A507E22779D7E400805124 /* LogInViewController.swift */; };
+		12A507E5277B1C4500805124 /* UserActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A507E4277B1C4500805124 /* UserActivityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1239CF60277B24B800757038 /* UserSecondActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSecondActivityViewController.swift; sourceTree = "<group>"; };
 		12A507CB2779C02300805124 /* UserLogIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserLogIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12A507CE2779C02300805124 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12A507D02779C02300805124 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		12A507DA2779C02600805124 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12A507DC2779C02600805124 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12A507E22779D7E400805124 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		12A507E4277B1C4500805124 /* UserActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActivityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +65,13 @@
 				12A507CE2779C02300805124 /* AppDelegate.swift */,
 				12A507D02779C02300805124 /* SceneDelegate.swift */,
 				12A507D22779C02300805124 /* ViewController.swift */,
+				12A507E22779D7E400805124 /* LogInViewController.swift */,
+				12A507E4277B1C4500805124 /* UserActivityViewController.swift */,
+				1239CF60277B24B800757038 /* UserSecondActivityViewController.swift */,
 				12A507D42779C02300805124 /* Main.storyboard */,
 				12A507D72779C02600805124 /* Assets.xcassets */,
 				12A507D92779C02600805124 /* LaunchScreen.storyboard */,
 				12A507DC2779C02600805124 /* Info.plist */,
-				12A507E22779D7E400805124 /* LogInViewController.swift */,
 			);
 			path = UserLogIn;
 			sourceTree = "<group>";
@@ -143,7 +149,9 @@
 			files = (
 				12A507E32779D7E400805124 /* LogInViewController.swift in Sources */,
 				12A507D32779C02300805124 /* ViewController.swift in Sources */,
+				1239CF61277B24B800757038 /* UserSecondActivityViewController.swift in Sources */,
 				12A507CF2779C02300805124 /* AppDelegate.swift in Sources */,
+				12A507E5277B1C4500805124 /* UserActivityViewController.swift in Sources */,
 				12A507D12779C02300805124 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
