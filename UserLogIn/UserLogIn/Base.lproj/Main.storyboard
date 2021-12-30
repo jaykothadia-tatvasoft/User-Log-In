@@ -126,13 +126,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="34"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="email"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a3O-j0-iMj">
                                         <rect key="frame" x="0.0" y="74" width="250" height="34"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="password"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -178,6 +178,8 @@
                         <barButtonItem key="backBarButtonItem" title="Sign Up" id="WW1-LM-5th"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="emailTextField" destination="V7B-mE-jBe" id="idp-8i-I4H"/>
+                        <outlet property="passwordTextField" destination="a3O-j0-iMj" id="myY-Lq-JbE"/>
                         <outlet property="userNameLable" destination="PXe-KH-nGH" id="QYh-ki-frY"/>
                     </connections>
                 </viewController>

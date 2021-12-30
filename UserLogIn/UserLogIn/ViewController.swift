@@ -20,6 +20,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         title = "Sign Up"
         nameTextField.delegate = self
         designationTextField.delegate = self
+        datePickerView.maximumDate = Date()
     }
 
     @IBAction private func didTapOnSignUp(_ sender: Any) {

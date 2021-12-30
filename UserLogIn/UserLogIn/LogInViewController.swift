@@ -7,9 +7,11 @@
 
 import UIKit
 
-class LogInViewController: UIViewController {
+class LogInViewController: UIViewController, UITextFieldDelegate {
     
     var userName : String = ""
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet private weak var userNameLable: UILabel!
     
     override func viewDidLoad() {
@@ -18,6 +20,25 @@ class LogInViewController: UIViewController {
         title = "Log In"
         if(userName != ""){
             userNameLable.text = "Hello \(userName)!!!"
+        }
+        passwordTextField.isSecureTextEntry = true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == emailTextField{
+            emailTextField.resignFirstResponder()
+            passwordTextField.becomeFirstResponder()
+        }else if textField == passwordTextField{
+            passwordTextField.resignFirstResponder()
+        }
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if (emailTextField.isFirstResponder){
+            emailTextField.resignFirstResponder()
+        }else if (passwordTextField.isFirstResponder){
+            passwordTextField.resignFirstResponder()
         }
     }
     
