@@ -16,11 +16,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         title = "Sign Up"
         nameTextField.delegate = self
         designationTextField.delegate = self
-        datePickerView.maximumDate = Date()
+        datePickerView.maximumDate = Date()  //disables selection of date past the current date
     }
 
     @IBAction private func didTapOnSignUp(_ sender: Any) {
@@ -39,22 +38,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
 }
 
 extension ViewController {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == nameTextField{
-            nameTextField.resignFirstResponder()
-            designationTextField.becomeFirstResponder()
-        }else if textField == designationTextField{
-            designationTextField.resignFirstResponder()
-        }
-        return true
-    }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if (nameTextField.isFirstResponder){
-            nameTextField.resignFirstResponder()
-        }else if (designationTextField.isFirstResponder){
-            designationTextField.resignFirstResponder()
-        }
+    //restricts any numerical entry in the both text fields
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+            let allowedLetters = CharacterSet.letters
+            let allowedWhiteSpace = CharacterSet.whitespaces
+            let characterSet = CharacterSet(charactersIn: string)
+            return allowedLetters.isSuperset(of: characterSet) || allowedWhiteSpace.isSuperset(of: characterSet)
     }
-    
 }

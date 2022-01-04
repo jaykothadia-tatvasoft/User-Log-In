@@ -24,27 +24,15 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         passwordTextField.isSecureTextEntry = true
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == emailTextField{
-            emailTextField.resignFirstResponder()
-            passwordTextField.becomeFirstResponder()
-        }else if textField == passwordTextField{
-            passwordTextField.resignFirstResponder()
-        }
-        return true
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if (emailTextField.isFirstResponder){
-            emailTextField.resignFirstResponder()
-        }else if (passwordTextField.isFirstResponder){
-            passwordTextField.resignFirstResponder()
-        }
-    }
-    
     @IBAction func didTappedLogIn(_ sender: UIButton) {
         let userActivityViewController = self.storyboard?.instantiateViewController(withIdentifier: "TabBar") as! UITabBarController
-        self.navigationController?.pushViewController(userActivityViewController, animated: true)
+        
+        //Email validation
+        if (emailTextField.text?.isValidEmail)! {
+            self.navigationController?.pushViewController(userActivityViewController, animated: true)
+        }else{
+            print("Email is not valid")
+        }
         
     }
     
@@ -60,4 +48,13 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     }
     */
 
+}
+
+extension String {
+    var isValidEmail : Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: self)
+    }
 }
