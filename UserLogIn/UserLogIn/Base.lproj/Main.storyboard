@@ -17,61 +17,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="KjL-q5-b64">
-                                <rect key="frame" x="82" y="138" width="250" height="108"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="KjL-q5-b64">
+                                <rect key="frame" x="77" y="188" width="260" height="202"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y88-ny-Gi8">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="34"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Designation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rew-d1-HEB">
-                                        <rect key="frame" x="0.0" y="74" width="250" height="34"/>
+                                        <rect key="frame" x="0.0" y="84" width="260" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of Birth" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pqD-Gu-GcT">
+                                        <rect key="frame" x="0.0" y="168" width="260" height="34"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="hwd-Xm-pzH"/>
-                                    <constraint firstAttribute="height" constant="108" id="trK-M5-O2H"/>
+                                    <constraint firstAttribute="width" constant="260" id="eeU-RJ-OI7"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vze-1l-SG2">
-                                <rect key="frame" x="38.5" y="266" width="337" height="435"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Date of Birth" translatesAutoresizingMaskIntoConstraints="NO" id="4Ty-0J-mSk">
-                                        <rect key="frame" x="43.5" y="35" width="250" height="35"/>
-                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="250" id="UH2-5j-y9S"/>
-                                            <constraint firstAttribute="height" constant="35" id="kn4-Gj-mEY"/>
-                                        </constraints>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="0C1-QD-77Q">
-                                        <rect key="frame" x="8.5" y="90" width="320" height="150"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="150" id="EI1-hN-pvb"/>
-                                        </constraints>
-                                        <connections>
-                                            <action selector="didDateChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="f58-M5-BPv"/>
-                                        </connections>
-                                    </datePicker>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="435" id="C4X-nj-dja"/>
-                                    <constraint firstItem="4Ty-0J-mSk" firstAttribute="top" secondItem="Vze-1l-SG2" secondAttribute="top" constant="35" id="Drw-rl-rFq"/>
-                                    <constraint firstItem="4Ty-0J-mSk" firstAttribute="centerX" secondItem="Vze-1l-SG2" secondAttribute="centerX" id="Jbm-27-SyU"/>
-                                    <constraint firstItem="0C1-QD-77Q" firstAttribute="centerX" secondItem="Vze-1l-SG2" secondAttribute="centerX" id="Wjb-VE-WEZ"/>
-                                    <constraint firstItem="0C1-QD-77Q" firstAttribute="top" secondItem="4Ty-0J-mSk" secondAttribute="bottom" constant="20" id="qMO-F2-dRS"/>
-                                    <constraint firstAttribute="width" constant="337" id="rLv-oG-BZN"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoC-zR-MIf">
                                 <rect key="frame" x="106" y="801" width="202" height="31"/>
                                 <constraints>
@@ -90,20 +61,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.008548766303252367" green="0.1577200030520105" blue="0.82153846153846155" alpha="0.87410071942446044" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="KjL-q5-b64" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Wf-36-zhf"/>
-                            <constraint firstItem="Vze-1l-SG2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38.5" id="GI8-Ik-g9H"/>
+                            <constraint firstItem="KjL-q5-b64" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7In-Vk-Gf8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hoC-zR-MIf" secondAttribute="bottom" constant="30" id="GSU-WV-lge"/>
-                            <constraint firstItem="Vze-1l-SG2" firstAttribute="top" secondItem="KjL-q5-b64" secondAttribute="bottom" constant="20" id="VXp-mX-un6"/>
                             <constraint firstItem="hoC-zR-MIf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YRf-dq-gA8"/>
-                            <constraint firstItem="KjL-q5-b64" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="fZ5-9X-dKc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vze-1l-SG2" secondAttribute="trailing" constant="38.5" id="rPu-e8-hnz"/>
+                            <constraint firstItem="KjL-q5-b64" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="yKx-R2-reu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5z5-RC-zoc"/>
                     <connections>
-                        <outlet property="datePickerView" destination="0C1-QD-77Q" id="Wag-wQ-Gqq"/>
                         <outlet property="designationTextField" destination="Rew-d1-HEB" id="Qms-FI-IYC"/>
-                        <outlet property="dobTextView" destination="4Ty-0J-mSk" id="uL3-9B-DCf"/>
+                        <outlet property="dobTextField" destination="pqD-Gu-GcT" id="2jO-k9-QAL"/>
                         <outlet property="nameTextField" destination="Y88-ny-Gi8" id="sNR-j9-dzZ"/>
                     </connections>
                 </viewController>
@@ -175,7 +142,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HqR-ul-joV">
-                        <barButtonItem key="backBarButtonItem" title="Sign Up" id="WW1-LM-5th"/>
+                        <barButtonItem key="backBarButtonItem" title="Log In" id="WW1-LM-5th"/>
                     </navigationItem>
                     <connections>
                         <outlet property="emailTextField" destination="V7B-mE-jBe" id="idp-8i-I4H"/>

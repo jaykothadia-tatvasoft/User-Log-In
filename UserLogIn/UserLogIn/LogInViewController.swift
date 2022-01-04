@@ -27,33 +27,24 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     @IBAction func didTappedLogIn(_ sender: UIButton) {
         let userActivityViewController = self.storyboard?.instantiateViewController(withIdentifier: "TabBar") as! UITabBarController
         
-        //Email validation
-        if (emailTextField.text?.isValidEmail)! {
-            self.navigationController?.pushViewController(userActivityViewController, animated: true)
+        //Email validation and textfield validation
+        if emailTextField.text == "" || passwordTextField.text == "" {
+            let alert = UIAlertController(title: "Empty Fields", message: "Please fill all fields", preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            present(alert, animated: true)
+        }else if (emailTextField.text?.isValidEmail)! == false {
+            let alert = UIAlertController(title: "Invalid Email", message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            present(alert, animated: true)
         }else{
-            print("Email is not valid")
+            self.navigationController?.pushViewController(userActivityViewController, animated: true)
         }
-        
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension String {
     var isValidEmail : Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,3}"
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailPred.evaluate(with: self)
     }
